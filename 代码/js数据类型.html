@@ -1,0 +1,44 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-02-11 14:08:45
+ * @LastEditTime: 2022-02-11 14:27:36
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \Web\html\js数据类型.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        /*undefined*/
+        var str;
+        console.log(str);
+
+        function test(str) {
+            console.log(str);
+        }
+        test();
+
+        var t = test();
+        console.log(t);
+        /*null*/
+        var a = 1;
+        var b = true;
+        console.log(typeof a);
+        console.log(typeof b);
+
+        var c = null;
+        console.log(typeof c);
+        var d;
+        console.log(d);
+        console.log(c == d);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组方法</title>
+</head>
+<body>
+</body>
+<script>
+    var arr = [1,2,3,'a','b'];
+    arr.push('c');
+    arr.unshift(0);
+    console.log(arr);
+
+    arr.pop();
+    arr.shift();
+    console.log(arr);
+
+    arr.reverse();
+    console.log(arr);
+
+    var str = arr.join(' ');
+    console.log(str);
+
+    var index = arr.indexOf('a');
+    console.log(index);
+
+    var arr3 = arr.slice(2,5);
+    console.log(arr3);
+
+    var arr4 = arr.splice(1,2,'aa','bb');
+    console.log(arr4);
+    console.log(arr);
+
+    var arr5 = [100,200];
+    var arr6 = arr.concat(arr5);
+    console.log(arr6);
+
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的作用域</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+
+    if(true)
+    {
+        var a = 1;
+
+    }
+    if(true)
+    {
+        console.log(a);
+    }
+
+    var bb =10;
+    function en(b){
+        var b =100;
+        var bb = 200;
+        console.log(bb);
+        c = 12;//没有var修饰符，则是全局变量
+    }
+    en(bb);
+    console.log(bb);
+    console.log(c);
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+
+</body>
+<script>
+    /*闭包*/
+    function f1() {
+        var n = 999;
+        function f2() {
+            console.log(n); // 999
+        }
+        return f2;
+    }
+    var result = f1();
+    result();
+    function createIncrementor(start) {
+        return function () {
+            return start++;
+        };
+    }
+    var inc = createIncrementor(5);
+    console.log(inc()) // 5
+    console.log(inc()) // 6
+    console.log(inc()) // 7
+</script>
+</html>

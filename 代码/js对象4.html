@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    var obj={
+      key1: 1,
+      key2: 2,
+      key3: 3,
+    };
+    console.log(Object.keys(obj));   //查看一个对象本身的所有属性，可以使用Object.keys方法。
+    delete obj.key3;
+    delete obj.key4;
+    console.log(obj.key3);
+    console.log(Object.keys(obj));
+    console.log('key2' in obj);
+    console.log(obj.hasOwnProperty('key1'));
+    console.log("======================================================================");
+    for(var i in obj){
+        console.log('键名', i);
+        console.log('键值',obj[i]);
+    }
+    console.log("======================================================================");
+    with(obj){
+        key1 = 98;
+        key2 = 88;
+
+    }
+    console.log(obj.key1);
+    console.log(obj.key2);
+
+
+</script>
+</html>

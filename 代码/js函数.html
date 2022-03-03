@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数</title>
+</head>
+<body>
+
+
+</body>
+
+<script !src="">
+    function test()
+    {
+        console.log("函数声明语句");
+    }
+    test();
+
+    function test2(a)
+    {
+        console.log(a);
+    }
+    test2(1);
+
+    var test3 = function (){
+        console.log("函数定义i表达式");
+    }
+    test3();
+
+    var test4 = function (a,b){
+        console.log(a,b);
+    }
+    test4(2,5);
+
+    var test5 = new Function('a','b','c','return a+b;');
+    var num = test5(1,2,3);
+    console.log(num);
+    console.log("=========================================");
+    function fn(str){
+        console.log(str);
+    }
+    fn();
+    function fn2(a,a){
+        console.log(a);
+    }
+    fn2(1,2);
+    function fn3(a){
+        a = a || 'a';
+        return a;
+    }
+    var a1 = fn3();
+    console.log(a1);
+    var a2 = fn3(3);
+    console.log(a2);
+    console.log("=========================================");
+    //值传递
+    var n=10;
+    function fn4(num){
+        num = 20;
+    }
+    fn4(n);
+    console.log(n);
+    //址传递
+    var obj = {
+        uname:"zhangsan",
+        upwd:"123456"
+    };
+    function fn5(o){
+        o.uname = "lisi";
+
+    }
+    fn5(obj);
+    console.log(obj);
+    console.log("==================函数的调用=======================");
+    //函数调用模式
+    function add(a,b){
+        return a+b;
+    }
+    var sum = add(1,2);
+    console.log(sum);
+
+    //对象调用模式
+    var ob = {
+        name:"zhangsan",
+        age:18,
+        sex:"Felman",
+        test:function (){
+            console.log("调用对象");
+        }
+    }
+    ob.test();
+    console.log(ob.age);
+
+
+
+</script>
+</html>

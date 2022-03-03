@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    /*表面上后面声明的函数f，应该覆盖前面的var赋值语句，但是由于存在函数提升*/
+    var f = function () {
+        console.log('1');
+
+    }
+    function f() {
+        console.log('2');
+
+    }
+    f();  //1
+    /*函数的name属性返回函数的名字。*/
+    var f2 = function (){};
+    console.log(f.name);
+    console.log(f2.name);
+    /*函数的length属性返回函数预期传入的参数个数，即函数定义之中的参数个数。*/
+    console.log(f.length);
+    /*函数的toString()方法返回一个字符串，内容是函数的源码。*/
+    console.log(f.toString());
+    /*作用域*/
+    function foo() {
+        var x = 1;
+        function bar() {
+            console.log(x);
+        }
+        return bar;
+    }
+    var x = 2;
+    var f = foo();
+    f(); // 1
+    console.log("=================================================");
+    /*参数的省略*/
+    function f(a, b,c) {
+        return a;
+    }
+    f(1, 2, 3) // 1
+    f(1) // 1
+    f() // undefined
+    console.log(f.length); // 2
+    console.log("=================================================");
+    var obj = { p: 1 };
+    function f(o) {
+        o.p = 3;
+    }
+    f(obj);
+    obj.p; // 2
+</script>
+</html>

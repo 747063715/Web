@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+/*    var obj = { p: 1 };
+    function f(o) {
+        o.p = 2;
+    }
+    f(obj);
+    console.log(obj.p); // 2*/
+/*    function f(a, a) {
+        console.log(a);
+    }
+    f(1,2) // 2
+    f(1)  //undefined*/
+function f(a, a) {
+    console.log(arguments[0]);
+}
+f(1) // 1
+console.log("=============================================================");
+/*arguments对象包含了函数运行时的所有参数，arguments[0]就是第一个参数，arguments[1]就是第二个参数，以此类推。这个对象只有在函数体内部，才可以使用。*/
+var f = function (one) {
+    console.log(arguments[0]);
+    console.log(arguments[1]);
+    console.log(arguments[2]);
+}
+f(1, 2, 3)
+console.log("====================================================================");
+var f2 = function(a, b) {
+    arguments[0] = 3;
+    arguments[1] = 2;
+    return a + b;
+}
+console.log(f2(1, 1)); // 5
+console.log("=====================================================================");
+var f3 = function(a, b) {
+    'use strict'; // 开启严格模式
+    arguments[0] = 3;
+    arguments[1] = 2;
+    return a + b;
+}
+console.log(f3(1, 1)); // 2
+console.log("====================================================================");
+function f4() {
+    return arguments.length;
+}
+console.log(f4(1, 2, 3)) // 3
+console.log(f4(1)) // 1
+console.log(f4()) // 0
+console.log("====================================================================");
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    var obg={};
+    obg.uname = "zhangsan";
+    obg.uage = 18;
+    console.log(obg);
+
+    var obj2 = {
+        uname:"zhangsan",
+        uage:23,
+        islike:true,
+        sayhello:function (){
+            console.log("Hello");
+        },
+        cats:['大猫','小猫'],
+        dog:{
+            name:"二狗",
+            age:1,
+        }
+    };
+    console.log(obj2);
+    console.log(obj2.uname);
+    obj2.sayhello();
+</script>
+</html>

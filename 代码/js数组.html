@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    var arr=[];
+    console.log(arr);
+    var arr2=[1,'a',true];
+    console.log(arr2);
+
+    var arr3 = new Array(1,2,3);
+    console.log(arr3);
+
+    var arr4 = new Array(5);
+    console.log(arr4);
+
+    console.log(arr2.length);
+
+    arr2.length = 5;
+    console.log(arr2.length);
+
+    arr2[4] = "zahngsan";
+    console.log(arr2);
+
+    arr2['uname'] = "admin";
+    console.log(arr2);
+    console.log("=========================================");
+
+    for(var i=0;i<arr2.length-1;i++)
+    {
+        console.log(arr2[i]);
+    }
+    console.log("=========================================");
+    for(var index in arr2)
+    {
+        console.log(index);
+        console.log(arr2[index]);
+        console.log("---------------------------------------");
+    }
+    console.log("=========================================");
+    arr2.forEach(function (element,index){
+        console.log(element);
+        console.log(index);
+        console.log("---------------------------------------");
+    })
+
+</script>
+</body>
+</html>

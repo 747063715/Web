@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作用域</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+    var v = 1;
+    function f() {
+        console.log(v+2);
+    }
+    f();
+    // 1
+    console.log();
+
+    function f(a,b){
+        return a;
+    }
+    /*f(,2);  SyntaxError: Unexpected token ,(…) */
+    f(undefined,2);
+</script>
+</html>

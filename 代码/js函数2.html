@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script !src="">
+  //（1）function 命令
+  function print(s){
+      console.log(s);
+  }
+  //（2）函数表达式
+  var print = function (s){
+      console.log(s);
+  };
+  //（3）Function 构造函数
+  var add = new Function('x','y','return x+y'); //总的来说，这种声明函数的方式非常不直观，几乎无人使用
+  function add(x,y){
+      return x+y;
+  }
+  console.log(add(1,2));
+  //如果同一个函数被多次声明，后面的声明就会覆盖前面的声明。
+  function f(){
+      console.log(1);
+  }
+  f();  //2
+  function f(){
+      console.log(2);
+  }
+  f();  //2
+  console.log("======================================");
+  function fib(num) {
+      if (num === 0) return 0;
+      if (num === 1) return 1;
+      return fib(num - 2) + fib(num - 1);
+  }
+  console.log(fib(6)); // 8
+  console.log(fib.toString());
+  console.log("======================================");
+
+
+</script>
+</html>
